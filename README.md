@@ -22,6 +22,53 @@
 - **个人中心 (User Center)**：用户信息管理、密码修改、订单追踪、意见反馈。
 - **系统设置**：支持动态配置服务器 IP 与端口，适配比赛现场环境。
 
+## 关键 API 接口详情
+项目对接了智慧城市标准后台接口，所有请求均以 `/prod-api` 为前缀。
+
+### 1. 认证与用户模块
+| 功能 | 路径 | 方法 | 请求参数 | 说明 |
+| :--- | :--- | :--- | :--- | :--- |
+| **用户登录** | `/api/login` | POST | `{username, password}` | 返回 Token 用于后续鉴权 |
+| **用户注册** | `/api/register` | POST | `{userName, nickName, password, phonenumber, email, idCard, sex, avatar}` | 新用户注册 |
+| **获取用户信息** | `/api/common/user/getInfo` | GET | Header: `Authorization` | 获取当前登录用户的详细资料 |
+| **修改个人资料** | `/api/common/user` | PUT | `{idCard, nickName, phonenumber, sex}` | 更新用户昵称、性别等信息 |
+| **重置密码** | `/api/common/user/resetPwd` | PUT | `{oldPassword, newPassword}` | 修改账户登录密码 |
+
+### 2. 首页与公共服务
+| 功能 | 路径 | 方法 | 请求参数 | 说明 |
+| :--- | :--- | :--- | :--- | :--- |
+| **首页轮播图** | `/api/rotation/list` | GET | - | 返回首页顶部的广告轮播图列表 |
+| **推荐服务** | `/api/service/list` | GET | - | 获取首页展示的快捷服务图标 |
+| **意见反馈** | `/api/common/feedback` | POST | `{title, content}` | 提交用户意见或错误报告 |
+
+### 3. 新闻资讯模块
+| 功能 | 路径 | 方法 | 请求参数 | 说明 |
+| :--- | :--- | :--- | :--- | :--- |
+| **新闻分类** | `/press/category/list` | GET | - | 获取新闻板块的所有分类 |
+| **新闻列表** | `/press/press/list` | GET | - | 获取新闻文章列表，可根据分类筛选 |
+| **新闻详情** | `/press/press/{id}` | GET | `id` (路径参数) | 获取单篇新闻的详细图文内容 |
+| **新闻评论列表** | `/press/comments/list` | GET | - | 获取所有评论，前端通常根据 `newsId` 过滤 |
+
+### 4. 智慧服务模块 (业务类)
+| 功能 | 路径 | 方法 | 请求参数 | 说明 |
+| :--- | :--- | :--- | :--- | :--- |
+| **定制班车线路** | `/api/bus/line/list` | GET | - | 获取所有班车线路信息 |
+| **班车站点列表** | `/api/bus/stop/list` | GET | - | 获取班车经过的站点详情 |
+| **生活缴费轮播** | `/api/living/rotation/list` | GET | - | 生活缴费页面的顶部幻灯片 |
+| **缴费项目分类** | `/api/living/category/list` | GET | - | 水电燃气等缴费类目的获取 |
+| **医院列表** | `/api/hospital/hospital/list` | GET | - | 门诊预约模块的医院清单 |
+| **医院详情** | `/api/hospital/hospital/{id}` | GET | `id` (路径参数) | 获取特定医院的介绍与排班 |
+
+## 开发注意事项
+1. **API 基地址 (BaseURL)**：
+   - 项目中通过 `common/fetch.js` 统一管理请求。
+   - 比赛现场需通过 **系统设置 (IP 设置)** 页面动态配置服务器 IP，配置后会存储在本地 `Storage` 中。
+2. **鉴权处理 (Token)**：
+   - 登录成功后，服务器返回的 `token` 会自动存储。
+   - 所有受保护的接口（如个人资料修改、提交反馈）均需在 Header 中携带 `Authorization: <Token>`。
+3. **图片路径**：
+   - 接口返回的图片路径（如 `advImg`, `cover`）通常为相对路径，显示时需拼接 `baseUrl` 前缀。
+
 ## 项目目录结构
 - `/pages`：业务页面代码。
 - `/uview-ui`：本地集成的 uView UI 组件源码。
