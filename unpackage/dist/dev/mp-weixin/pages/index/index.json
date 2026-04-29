@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "智慧城市",
+  "usingComponents": {
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "u-line": "/uview-ui/components/u-line/u-line",
+    "news-vue": "/pages/News/NewsMain"
+  }
+}

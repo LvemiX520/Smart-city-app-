@@ -1,0 +1,192 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/AllService/AllService",
+    "pages/News/News",
+    "pages/PersonalCenter/PersonalCenter",
+    "pages/News/NewsElement",
+    "pages/News/commentaries/Commentaries"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/componentsC",
+      "pages": [
+        "test/index",
+        "gap/index",
+        "subsection/index",
+        "section/index",
+        "link/index",
+        "mask/index",
+        "countTo/index",
+        "color/index",
+        "countDown/index",
+        "progress/index",
+        "alertTips/index",
+        "badge/index",
+        "button/index",
+        "collapse/index",
+        "actionSheet/index",
+        "messageInput/index",
+        "popup/index",
+        "cell/index",
+        "numberBox/index",
+        "grid/index",
+        "layout/index",
+        "loadmore/index"
+      ]
+    },
+    {
+      "root": "pages/template",
+      "pages": [
+        "wxCenter/index",
+        "keyboardPay/index",
+        "mallMenu/index2",
+        "mallMenu/index1",
+        "coupon/index",
+        "login/index",
+        "citySelect/index",
+        "submitBar/index",
+        "comment/index",
+        "comment/reply",
+        "order/index",
+        "login/code",
+        "address/index",
+        "address/addSite"
+      ]
+    },
+    {
+      "root": "pages/library",
+      "pages": [
+        "debounce/index",
+        "deepClone/index",
+        "deepMerge/index",
+        "getRect/index",
+        "timeFrom/index",
+        "globalVariable/globalData",
+        "globalVariable/prototype",
+        "globalVariable/vuex",
+        "globalVariable/index",
+        "http/index",
+        "test/index",
+        "mpShare/index",
+        "color/index",
+        "trim/index",
+        "random/index",
+        "md5/index",
+        "colorSwitch/index",
+        "randomArray/index",
+        "guid/index",
+        "timeFormat/index",
+        "route/index",
+        "route/routeTo",
+        "queryParams/index"
+      ]
+    },
+    {
+      "root": "pages/componentsA",
+      "pages": [
+        "parse/index",
+        "backTop/index",
+        "calendar/index",
+        "form/index",
+        "select/index",
+        "slider/index",
+        "fullScreen/index",
+        "navbar/index",
+        "field/index",
+        "modal/index",
+        "indexList/index",
+        "empty/index",
+        "avatarCropper/index",
+        "noNetwork/index",
+        "icon/index",
+        "avatar/index",
+        "keyboard/index",
+        "lazyLoad/index",
+        "tabs/index",
+        "tag/index",
+        "timeLine/index",
+        "toast/index",
+        "topTips/index",
+        "verificationCode/index"
+      ]
+    },
+    {
+      "root": "pages/componentsB",
+      "pages": [
+        "dropdown/index",
+        "tabbar/index",
+        "line/index",
+        "image/index",
+        "card/index",
+        "divider/index",
+        "picker/index",
+        "noticeBar/index",
+        "checkbox/index",
+        "radio/index",
+        "loading/index",
+        "switch/index",
+        "skeleton/index",
+        "upload/index",
+        "waterfall/index",
+        "table/index",
+        "rate/index",
+        "readMore/index",
+        "search/index",
+        "steps/index",
+        "sticky/index",
+        "swiper/index",
+        "swipeAction/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uView",
+    "navigationBarBackgroundColor": "#007aff",
+    "backgroundColor": "#"
+  },
+  "tabBar": {
+    "color": "#898989",
+    "selectedColor": "#007aff",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/主页.png",
+        "selectedIconPath": "static/tabs/主页-1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/AllService/AllService",
+        "iconPath": "static/tabs/全部服务.png",
+        "selectedIconPath": "static/tabs/全部服务-1.png",
+        "text": "全部服务"
+      },
+      {
+        "pagePath": "pages/News/News",
+        "iconPath": "static/tabs/新闻.png",
+        "selectedIconPath": "static/tabs/新闻-1.png",
+        "text": "新闻"
+      },
+      {
+        "pagePath": "pages/PersonalCenter/PersonalCenter",
+        "iconPath": "static/tabs/个人中心.png",
+        "selectedIconPath": "static/tabs/个人中心-1.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/example/components": {
+      "network": "all",
+      "packages": [
+        "pages/componentsA",
+        "pages/componentsB",
+        "pages/componentsC"
+      ]
+    }
+  },
+  "usingComponents": {}
+}

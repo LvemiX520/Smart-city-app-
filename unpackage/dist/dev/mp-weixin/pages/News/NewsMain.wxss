@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.news {
+  display: flex;
+  flex-direction: column;
+}
+.news .news-tab {
+  border-bottom: 8rpx solid #ececec;
+}
+.news .news-tab .news-tab-scroll {
+  height: 100rpx;
+  white-space: nowrap;
+}
+.news .news-tab .news-tab-scroll .news-tab-scroll-box {
+  height: 100rpx;
+  padding: 0 20rpx;
+  display: inline-block;
+  text-align: center;
+}
+.news .news-tab .news-tab-scroll .news-tab-scroll-box.active {
+  color: red;
+}
+.news .news-tab .news-tab-scroll .news-tab-scroll-box .news-tab-scroll-box-text {
+  font-size: 30rpx;
+  line-height: 100rpx;
+  padding-right: 40rpx;
+}
+.news .news-tab .news-tab-scroll .news-tab-scroll-box .news-tab-scroll-box-text.line {
+  border-right: 1rpx solid #000;
+}
+.news .news-element .news-element-box {
+  display: block;
+  height: 200rpx;
+  border-bottom: 1rpx solid #bdbdbd;
+}
+.news .news-element .news-element-box image {
+  float: left;
+  width: 20%;
+  height: 80%;
+  padding: 20rpx;
+}
+.news .news-element .news-element-box text {
+  display: block;
+  padding: 20rpx;
+}
+

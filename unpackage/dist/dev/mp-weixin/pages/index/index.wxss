@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.item.data-v-57280228 {
+  margin: 30rpx 0;
+}
+.ss.data-v-57280228 {
+  margin: 30rpx;
+}
+.lbt.data-v-57280228 {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.lbt .u-demo-area.data-v-57280228 {
+  margin-top: 15rpx;
+}
+.tjfw.data-v-57280228 {
+  margin-top: 30rpx;
+  height: 250rpx;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+}
+.tjfw .tjfw-title.data-v-57280228 {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  height: 50rpx;
+  text-indent: 1em;
+}
+.tjfw .tjfw-title text.data-v-57280228 {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.tjfw .tjfw-fw.data-v-57280228 {
+  display: flex;
+  flex: 1;
+  margin-top: 20rpx;
+  justify-content: space-evenly;
+}
+.tjfw .tjfw-fw .tjfw-all.data-v-57280228 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tjfw .tjfw-fw .tjfw-all image.data-v-57280228 {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #78a4fa;
+  padding: 20rpx;
+  border-radius: 50%;
+}
+.tjfw .tjfw-fw .tjfw-all text.data-v-57280228 {
+  align-content: center;
+  flex: 1;
+}
+.zt.data-v-57280228 {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.zt .zt-title.data-v-57280228 {
+  flex: 0.6;
+  font-size: 1.2em;
+  margin-bottom: 20rpx;
+  text-indent: 1em;
+}
+.zt .zt-wz.data-v-57280228 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30rpx;
+}
+.zt .zt-wz .zt-wz-box.data-v-57280228 {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  height: 250rpx;
+  border-radius: 20rpx;
+  box-shadow: 5rpx 5rpx #ebebeb;
+}
+.zt .zt-wz .zt-wz-box image.data-v-57280228 {
+  flex: 1;
+  width: 100%;
+  flex-grow: 0.7;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.zt .zt-wz .zt-wz-box text.data-v-57280228 {
+  flex: 0.3;
+  margin-left: 20rpx;
+  margin-bottom: 15rpx;
+  font-size: 27rpx;
+  text-indent: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.news.data-v-57280228 {
+  margin-top: 30rpx;
+}
+

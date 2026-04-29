@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新闻详情",
+  "usingComponents": {
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "u-badge": "/uview-ui/components/u-badge/u-badge"
+  }
+}
